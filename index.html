@@ -8,17 +8,32 @@
 </head>
 <body>
     <h1>Run some code.</h1>
-    <input id= "input-number" type="number">
+    <div>
+        square: <input name="power" type="radio" value="2">
+        cube: <input name="power" type="radio" value="3">
+    </div>
+    <input id= "input-number" type="number" value="4">
     <button onclick="getSquare()">Get Square</button>
 
      <script>
         function getSquare(){
+            //find the input with id "input-number"
             var input = document.getElementById('input-number');
-          
 
+            //get the input with name = power, that is checked
+            var power = document.querySelector('input[name=power]:checked');
+
+            //get the value out of the number input:
             var x = input.value;
-            var square = x * x;
-            console.log(' square of', x, 'is', square);
+
+            //get the value out of the radio button
+            var exponent= power.value;
+
+            //calculate the answer
+            var answer = Math.pow(x, exponent);
+            
+            //log the answer to the conosle
+            console.log(x, 'to the', exponent, 'is', answer);
         }
 
     </script>
