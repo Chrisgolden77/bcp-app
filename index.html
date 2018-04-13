@@ -2,57 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
-    <h1>On a new branch.</h1>
-    <main>
-        <div>
-            <label>
-                default input:
-                <input value="hello"
-            </label>
-        </div>
-        <div>
-            <label>
-                type text:
-                <input type= "text"> <placeholder+"Please fill this in"
-            </label>
-        </div>
-        <div>
-            <label>
-                type number:
-                <input type= "number">
-            </label>
-        </div>
-        <div>
-            <label>
-                type checkbox:
-                <input checked type= "checkbox">
-            </label>
-        </div>
-        <div>
-            type radio:
-            <label>
-                even: <input name = "num" checked type= "radio">
-            </label>
-            <label>
-                odd: <input name = "num" type= "radio">
-            </label>
-        </div>
-        <div>
-            <label>
-                text area:
-                <textarea>here is some text</textarea>
-            </label>
-        </div>
-        <div>
-            <button>
-                CLICK ME!
-            </button>>
-        </div>
-    </main>
+    <h1>Run some code.</h1>
+    <button onclick="getSquare()">Get Square</button>
+
+     <script>
+        function getSquare(){
+        var x = +prompt('a number?');
+        var square = x * x;
+        console.log(' square of', x, 'is', square);
+        }
+
+        //getSquare();
+    </script>
+   
 </body>
 </html>
